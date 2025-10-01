@@ -1,0 +1,149 @@
+/* style.css - padronizado: fundo branco, detalhes em azul, conteúdo centralizado */
+
+:root{
+  --blue: #0d6efd;
+  --blue-dark: #064ecb;
+  --radius: 10px;
+  --max-width: 900px;
+  --gap: 16px;
+}
+
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #ffffff;
+  color:#111;
+}
+
+.container{
+  max-width: var(--max-width);
+  margin: 40px auto;
+  padding: 24px;
+}
+
+header.app-header{
+  position: relative;
+  width:100%;
+  background: transparent;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 18px 24px;
+}
+
+header.app-header h1{
+  margin:0;
+  font-size:1.6rem;
+  color:var(--blue-dark);
+  letter-spacing: 0.2px;
+}
+
+/* botão no canto superior direito */
+.top-right-actions{
+  position: absolute;
+  right: 18px;
+  top: 14px;
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.btn{
+  display:inline-block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration:none;
+  border: none;
+  cursor:pointer;
+  font-weight:600;
+  background: var(--blue);
+  color:#fff;
+}
+
+.btn.ghost{
+  background: transparent;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+}
+
+/* centralizar áreas de formulário e boxes */
+.center-box{
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(13,110,253,0.08);
+  margin: 24px auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+/* formulários */
+form{
+  width:100%;
+  max-width:520px;
+  display:flex;
+  flex-direction:column;
+  gap: var(--gap);
+  align-items:stretch;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="date"], textarea, select {
+  width:100%;
+  padding: 10px 12px;
+  border-radius:8px;
+  border:1px solid #e6e6e6;
+  font-size: 0.98rem;
+}
+
+label{ font-size:0.9rem; color:#333; text-align:left; }
+
+.form-row{
+  display:flex;
+  gap:8px;
+}
+
+/* botões de ação */
+.primary{
+  background: var(--blue);
+  color: #fff;
+  border:none;
+  padding: 12px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.secondary{
+  background: transparent;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+  padding: 10px 12px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* responsividade */
+@media(max-width:640px){
+  .container{ padding: 12px; margin: 18px 12px; }
+  header.app-header h1{ font-size:1.2rem; }
+  .top-right-actions{ right: 12px; top: 12px; }
+}
+
+/* pequenas utilidades */
+.small { font-size:0.85rem; color:#666; }
+.center { text-align:center; }
+.space-between { display:flex; justify-content:space-between; align-items:center; gap:8px; }
+
+/* links */
+a.link { color:var(--blue); text-decoration:none; font-weight:600; }
+
+/* tables simples */
+table { width:100%; border-collapse:collapse; margin-top:10px; }
+th,td{ padding:8px 10px; border-bottom:1px solid #f0f0f0; text-align:left; }
+
+/* mensagens */
+.alert { padding:10px 12px; border-radius:8px; background:#f8f9fa; color:#333; border:1px solid #ececec; }
