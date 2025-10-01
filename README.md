@@ -1,3 +1,0 @@
-# Site de Manutenção de Computadores
-
-Instruções de uso aqui...
